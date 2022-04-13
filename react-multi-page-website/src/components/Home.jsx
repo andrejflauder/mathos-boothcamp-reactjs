@@ -1,5 +1,10 @@
-import React from "react";
+import React, { useState } from 'react';
 import StartButton from "./StartButton";
+import home from "./images/home.jpg";
+import { BrowserRouter } from 'react-router-dom';
+import ScreenSwitchboard from '../ScreenSwitchboard';
+import ModalManager from '../ModalManager';
+import '../app-shell.css';
 
 function Home() {
   return (
@@ -15,6 +20,7 @@ function Home() {
           </div>
           <div class="col-lg-5">
             <h1 class="font-weight-light">Home</h1>
+            <img class="car-service" src={home}></img>
             <br/>
             <p>Service configurator</p>
             <StartButton/>

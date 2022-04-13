@@ -3,7 +3,4 @@ export { default as Footer } from "./Footer";
 export { default as Home } from "./Home";
 export { default as Riders } from "./Riders";
 export { default as Location } from "./Location";
-export { default as Blog } from "./blog/Blog";
-export { default as Posts } from "./blog/Posts";
-export { default as Post } from "./blog/Post";
 export { default as StartButton } from "./StartButton";
