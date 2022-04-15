@@ -4,10 +4,9 @@ import { BrowserRouter } from 'react-router-dom';
 import { Route, Switch } from 'react-router-dom';
 import ModalManager from './ModalManager';
 
-import './app-shell.css';
 
 const AppShell = () => {
-  const [modalOpen, setModal] = useState(false);
+  const [modalOpen, setState] = useState(false);
 
   const openModal = event => {
     event.preventDefault();
@@ -16,22 +15,28 @@ const AppShell = () => {
         dataset: { modal }
       }
     } = event;
-    if (modal) setModal(modal);
+    if (modal) setState(modal);
   };
 
   const closeModal = () => {
-    setModal('');
+    setState('');
   };
+
+
+
+
+
 
   return (
     <BrowserRouter>
-      <div className="app--shell" onClick={openModal}>
+      <div id="test" onClick={openModal}>
       <Switch>
       <Route exact path="/">
       <div style={{ display: 'flex', columnGap: '1rem' }}>
         <button type="button" data-modal="modal-one">
           Open Modal One
         </button>
+        
       </div>
       </Route>
     </Switch>

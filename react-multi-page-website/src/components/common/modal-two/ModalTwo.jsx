@@ -1,5 +1,5 @@
 import React from 'react';
-
+import CarService from './CarService'
 import Modal from '../modal/Modal';
 
 const ModalTwo = ({ closeFn = () => null, open = false }) => {
@@ -11,7 +11,8 @@ const ModalTwo = ({ closeFn = () => null, open = false }) => {
             <h1>Modal Two</h1>
           </header>
           <div className="modal--body">
-            <p>Modal Two content will be rendered here.</p>
+            <p>Choose service</p>
+            <CarService />
           </div>
           <footer className="modal--footer">
         <button type="button" data-modal="modal-three">
